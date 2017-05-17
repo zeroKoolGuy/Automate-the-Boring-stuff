@@ -1,0 +1,58 @@
+theBoard = {'top-L': ' ', 'top-M':' ', 'top-R': ' ',
+            'mid-L': ' ', 'mid-M':' ', 'mid-R': ' ',
+            'low-L': ' ', 'low-M':' ', 'low-R': ' ',}
+
+def printBoard(board):
+    print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
+    print('-+-+-')
+    print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
+    print('-+-+-')
+    print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
+
+
+turn = 'X'
+
+for i in range(9):
+    printBoard(theBoard)
+    print('Turn for ' + turn + '. Move on which space?')
+    ####  if turn == 'X': this loop makes the code see if Turn is 'X' but  X is the default turn.
+    move = input()
+    theBoard[move] = turn
+    if turn == 'X':
+        turn = 'O'
+    else:
+        turn = 'X'
+        
+        
+## Winner Search
+    winnerChicken = ('X')
+    for i in range(0,len(theBoard[0])):
+        print(i)
+        for j in range(0,(len(theBoard))):
+            print(j)(i)
+            
+            
+        if i == winnerChicken:
+            print('Congrats player' + winnerChicken + '!')
+            
+printBoard(theBoard)
+
+###### running the code 
+
+####printBoard(theBoard)
+####
+####
+####>>> ================================ RESTART ================================
+####>>> 
+#### | | 
+####-+-+-
+#### | | 
+####-+-+-
+#### | | 
+####Turn for X. Move on which space?
+####mid-L
+####Traceback (most recent call last):
+####  File "C:/Users/boltonle/Desktop/Project_Folder/ticTacToe.py", line 28, in <module>
+####    for i in range(0,len(theBoard[0])):
+####KeyError: 0
+####>>> 
